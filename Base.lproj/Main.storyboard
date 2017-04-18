@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emraz QR Code Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n95-Bg-Suo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Emraz QR Code Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n95-Bg-Suo">
                                 <rect key="frame" x="23" y="71" width="328" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Orc-yX-hMh"/>
+                                    <constraint firstAttribute="width" constant="328" id="qwd-7P-eWO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please write your text/URL in given textfiled to generate QR code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-Kq-gdv">
-                                <rect key="frame" x="23" y="100" width="328" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please write your text/URL in given textfiled to generate QR code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-Kq-gdv">
+                                <rect key="frame" x="23" y="100" width="328" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="Y1L-JY-9Cu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-oZ-but">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-oZ-but">
                                 <rect key="frame" x="87" y="337" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cTw-fm-cKl"/>
+                                    <constraint firstAttribute="width" constant="200" id="hE1-hg-h3J"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAz-UD-vvj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAz-UD-vvj">
                                 <rect key="frame" x="23" y="193" width="328" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="07x-mz-Pql"/>
+                                    <constraint firstAttribute="height" constant="30" id="vPt-DJ-QE1"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -49,10 +61,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1yA-IA-oZN"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-5y-h37">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-5y-h37">
                                 <rect key="frame" x="87" y="240" width="200" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0056434627619999997" green="0.73029345270000001" blue="0.92001408340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="27c-iH-Afm"/>
+                                    <constraint firstAttribute="height" constant="44" id="Xp9-D0-7gH"/>
+                                </constraints>
                                 <state key="normal" title="Generate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -62,6 +77,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbi-oZ-but" secondAttribute="bottom" constant="130" id="61C-Es-PIX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dbi-oZ-but" secondAttribute="trailing" constant="72" id="8Fc-91-XQr"/>
+                            <constraint firstItem="bzx-5y-h37" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B1B-Mm-ChU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qmu-Kq-gdv" secondAttribute="trailing" constant="8" id="BPZ-XC-8lU"/>
+                            <constraint firstItem="bzx-5y-h37" firstAttribute="top" secondItem="lAz-UD-vvj" secondAttribute="bottom" constant="17" id="E1r-vS-F63"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lAz-UD-vvj" secondAttribute="trailing" constant="8" id="E3b-hb-mD2"/>
+                            <constraint firstItem="lAz-UD-vvj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="K7S-Sv-Gb4"/>
+                            <constraint firstItem="dbi-oZ-but" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="Nns-y7-119"/>
+                            <constraint firstItem="qmu-Kq-gdv" firstAttribute="top" secondItem="n95-Bg-Suo" secondAttribute="bottom" constant="8" id="P3U-A2-HWo"/>
+                            <constraint firstItem="n95-Bg-Suo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="Vwz-aQ-YOZ"/>
+                            <constraint firstItem="dbi-oZ-but" firstAttribute="top" secondItem="bzx-5y-h37" secondAttribute="bottom" constant="53" id="biv-XM-hfV"/>
+                            <constraint firstItem="qmu-Kq-gdv" firstAttribute="top" secondItem="n95-Bg-Suo" secondAttribute="bottom" constant="8" id="keq-eK-iAn"/>
+                            <constraint firstItem="qmu-Kq-gdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="yDT-pu-rTQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="generateButton" destination="bzx-5y-h37" id="KLQ-o5-C4B"/>
